@@ -1,13 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap");
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Montserrat Alternates", "Segoe UI", sans-serif;
+  background-color: #131722;
+  color: #fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.general, .parent {
+  background-color: tomato;
 }
+
+.parent {
+  width: 500px;
+  height: 500px;
+}
+.parent .child {
+  background-color: #fff;
+  width: 166.6666666667px;
+}
+.parent .child p {
+  color: black;
+}
+.parent .child p font {
+  size: 20px;
+  weight: 300;
+  family: "segio ui";
+}
+.parent .child:hover {
+  background-color: black;
+}
+.parent .child:hover p {
+  color: #fff;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.pagination li {
+  margin: 1px 2px;
+}
+.pagination li a {
+  border-radius: 5px;
+  padding: 1px 5px;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+.pagination li a:hover:not(.pagination-link-active) {
+  background-color: #ddd;
+  color: #131722;
+}
+.pagination .previous, .pagination .pagination-link {
+  background-color: #131722;
+  padding: 1px 5px;
+  border-radius: 5px;
+}
+.pagination .pagination-link-active {
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+.pagination .pagination-link-active a {
+  background-color: #131722;
+  color: #fff;
+}/*# sourceMappingURL=index.css.map */
