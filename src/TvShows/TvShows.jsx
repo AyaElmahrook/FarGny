@@ -34,8 +34,8 @@ export default function TvShows() {
                         </div>
                     </div>
         {tvShows.slice(offset,offset+PER_PAGE).map((tvShow,i)=>{return(
-            <div key={i} className="col-lg-2 col-md-4 col-sm-6">
-                <h4>{tvShow.name}</h4>
+            <div key={i} className="col-lg-2 col-md-4 col-sm-6 grid-block">
+                <h5 className='grid-title'>{tvShow.name}</h5>
                 <img src={"https://image.tmdb.org/t/p/w500"+tvShow.poster_path} alt={"tv show "+i} className='img-fluid w-100'></img>
             </div>
         )})}

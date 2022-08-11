@@ -54,7 +54,7 @@ useEffect(() => {
         <div className="d-flex justify-content-center position-relative">
           <input id="txtSearchMovies" className="form-control w-50 mt-2 mx-2" placeholder="search movies" type="search"
                   onInput={(eventInfo)=>{return findMovie(eventInfo)}} /* onBlur={()=>{return clearMovies()}} *//>
-                {(filteredMovies.length !== 0)? <ul className='position-absolute top-100 start-50 list-group text-bg-light'>
+                {(filteredMovies.length !== 0)? <ul className='search-list position-absolute top-100 start-50 list-group text-bg-light'>
                 {filteredMovies.map((filteredMovie,i)=> <li key={i} onClick={(evt)=> changeSearchValue(evt)} className='list-group-item px-2'>{filteredMovie.title}</li>)}              
                   </ul>:""}
         </div>
@@ -69,8 +69,8 @@ useEffect(() => {
           {(filteredMovies.length !== 0)?filteredMovies.slice(offset, offset + PER_PAGE).map((movie, i) => {
             return (
               <div key={i} className="col-lg-2 col-md-4 col-sm-6">
-                <div>
-                  <span>{movie.title}</span>
+                <div className='grid-block'>
+                  <h5 className='grid-title'>{movie.title}</h5>
                   <Link to={'/singleMovie/'+movie.id}>
                     <img
                       className="img-fluid w-100" alt={"movie" + movie.poster_path}
@@ -83,8 +83,8 @@ useEffect(() => {
           }):movies.slice(offset, offset + PER_PAGE).map((movie, i) => {
             return (
               <div key={i} className="col-lg-2 col-md-4 col-sm-6">
-                <div>
-                  <span>{movie.title}</span>
+                <div className='grid-block'>
+                  <h5 className='grid-title'>{movie.title}</h5>
                   <Link to={'/singleMovie/'+movie.id}>
                     <img
                       className="img-fluid w-100" alt={"movie" + movie.poster_path}

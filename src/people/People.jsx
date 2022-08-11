@@ -19,9 +19,9 @@ export default function People() {
       <div className="container my-5">
         <div className="row">
           {people.map((person,i)=>{return(
-            <div key={i} className="col-lg-2 col-md-4 col-sm-6">
-              <h4>{person.name}</h4>
-              <img src={"https://image.tmdb.org/t/p/w500"+person.profile_path} alt={"person "+i} className='img-fluid w-100'></img>
+            <div key={i} className="col-lg-2 col-md-4 col-sm-6 grid-block">
+              <h5 className='grid-title'>{person.name}</h5>
+              <img src={"https://image.tmdb.org/t/p/w500"+person.profile_path} alt={person.name} className='img-fluid w-100'></img>
             </div>
           )})}
         </div>
